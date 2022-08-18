@@ -1,0 +1,1 @@
+SELECT CONCAT(E.Fname," ", E.Lname), E.Ssn, D.Dnumber, COUNT(*) FROM EMPLOYEE E, EMPLOYEE D, DEPARTMENT D1 ON D1.Mgr_ssn=D.Ssn GROUP BY E.Ssn;

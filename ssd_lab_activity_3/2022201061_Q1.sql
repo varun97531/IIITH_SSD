@@ -1,0 +1,1 @@
+SELECT DISTINCT CONCAT(E.Fname," ", E.Lname), E.Ssn, D.Dname, D.Dnumber AS column_name, Ssn FROM EMPLOYEE E WHERE E.Ssn IN (SELECT DISTINCT W.Essn FROM WORKS_ON W, DEPARTMENT D WHERE W.Essn = D.Mgr_ssn AND W.Hours<40);
