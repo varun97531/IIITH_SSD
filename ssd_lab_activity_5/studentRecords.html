@@ -1,0 +1,52 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title> Students Record </title>  
+    <link rel="stylesheet" href="studentstyles.css" />
+
+    <script>
+        function DeleteItem() {
+          document.getElementById("myTable").deleteRow(0);
+        }
+    </script>
+
+    <script>
+        function AddItem() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = document.getElementById("roll").value;
+            cell2.innerHTML = document.getElementById("name").value;
+        }
+    </script>
+
+</head>    
+<body>    
+    <div class="container">
+        <h1 align="center" style="background-color:powderblue;"> Students Records</h1>  
+        <form id="from">  
+                <input id="roll" type="text" placeholder="Roll No" name="Username" >  
+                <input id="name" type="text" placeholder="Name" name="username">   
+                <!-- <input type="submit" value="OnClickPerform()"> -->
+                <!-- <button type="button" onclick="OnClickPerform()">Try it</button> -->
+
+                <button type="button" onclick="AddItem()" style="color: black; background-color:green ">Add Row</button>
+                <br>
+
+                <table id="myTable">
+                    <tr>
+                    <td>Roll No</td>
+                    <td>Name</td>
+                    </tr>
+                    
+                </table>
+                <br>
+                <button type="button" onclick="DeleteItem()" style="color: black; background-color: red;">Delete Row</button>
+
+        </form>   
+        
+    </div>  
+</body>     
+</html>  
